@@ -23,5 +23,6 @@ public class ApiAccessGatewayApplication {
                 .route("topujun2", r -> r.host("*.myhost.org") // 这个是域名
                         .uri("http://httpbin.org"))
                 .build();
+
     }
 }

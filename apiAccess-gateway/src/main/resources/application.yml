@@ -1,0 +1,21 @@
+server:
+  port: 8090
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: ingredients
+          uri: http://localhost:8123
+          predicates:
+            - Path=/api/**
+          filters:
+            - AddRequestHeader=color, blue
+            - AddRequestParameter=name, pujun
+            - name: CircuitBreaker
+              args:
+                name: myCircuitBreaker
+                fallbackUri: forward:/fallback
+        - id: ingredients-fallback
+          uri: http://211.159.150.239/
+          predicates:
+            - Path=/fallback

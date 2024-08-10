@@ -1,0 +1,5 @@
+#pujun:
+#  api:
+#    client:
+#      access-key: pujun
+#      secret-key: abc

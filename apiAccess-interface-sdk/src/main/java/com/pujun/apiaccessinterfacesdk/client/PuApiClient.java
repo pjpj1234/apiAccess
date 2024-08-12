@@ -17,6 +17,8 @@ import java.util.Map;
 
 public class PuApiClient {
 
+    private static final String GATEWAY_HOST = "http://localhost:8090";
+
     private final String accessKey;
     private final String secretKey;
 
@@ -29,20 +31,20 @@ public class PuApiClient {
         //可以单独传入http参数，这样参数会自动做URL编码，拼接在URL中
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
-        return HttpUtil.get("http://localhost:8123/api/name/", paramMap);
+        return HttpUtil.get(GATEWAY_HOST + "/api/get/", paramMap);
     }
 
     public String getNameByPost(String name){
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
-        return HttpUtil.post("http://localhost:8123/api/name/", paramMap);
+        return HttpUtil.post(GATEWAY_HOST + "/api/name/", paramMap);
     }
 
     // 把传入的参数修改为 地址 或者 接口id，这样传入到body、请求头中，或者添加到url后面，调用对应的Post功能返回结果
     // 其实如果传入参数为地址 这里就可以直接访问那个地址，返回结果，但是那个地址就不是我开发的了
     public String getUsernameByPostWithJSON(User user) throws UnsupportedEncodingException {
         String json = JSONUtil.toJsonStr(user);
-        HttpResponse httpResponse = HttpRequest.post("http://localhost:8123/api/name/user/")
+        HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/name/user/")
                 .addHeaders(getHeaders(json)) //添加请求头
                 .body(json)
                 .execute();

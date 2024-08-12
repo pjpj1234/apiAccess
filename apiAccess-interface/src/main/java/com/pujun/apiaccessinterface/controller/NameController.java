@@ -32,7 +32,7 @@ public class NameController {
 
     @PostMapping("/user")
     public String getUsernameByPost(@RequestBody User user, HttpServletRequest request){
-        String accessKey = request.getHeader("accessKey");
+        String accessKey = request.getHeader("accessKey"); //5
         String sign = request.getHeader("sign");
         String body = request.getHeader("body");
         String nonce = request.getHeader("nonce");

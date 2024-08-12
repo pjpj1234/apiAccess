@@ -6,4 +6,4 @@ pujun:
   api:
     client:
       access-key: pujun
-      secret-key: abcdf
+      secret-key: abc

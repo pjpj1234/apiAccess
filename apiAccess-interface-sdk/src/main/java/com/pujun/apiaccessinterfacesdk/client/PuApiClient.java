@@ -31,13 +31,11 @@ public class PuApiClient {
         //可以单独传入http参数，这样参数会自动做URL编码，拼接在URL中
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("name", name);
-        return HttpUtil.get(GATEWAY_HOST + "/api/get/", paramMap);
+        return HttpUtil.get(GATEWAY_HOST + "/api/name/get/", paramMap);
     }
 
-    public String getNameByPost(String name){
-        HashMap<String, Object> paramMap = new HashMap<>();
-        paramMap.put("name", name);
-        return HttpUtil.post(GATEWAY_HOST + "/api/name/", paramMap);
+    public String getNameByGet2(String name){
+        return HttpUtil.get(GATEWAY_HOST + "/api/name/" + name);
     }
 
     // 把传入的参数修改为 地址 或者 接口id，这样传入到body、请求头中，或者添加到url后面，调用对应的Post功能返回结果

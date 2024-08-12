@@ -20,7 +20,7 @@ class PuApiClientTest {
     void test() throws UnsupportedEncodingException {
         PuApiClient puApiClient = new PuApiClient("pujun", "abc");
         String result1 = puApiClient.getNameByGet("pujun1");
-        String result2 = puApiClient.getNameByPost("pujun2");
+        String result2 = puApiClient.getNameByGet2("pujun2");
         User user = new User();
         user.setUsername("pujun3");
         String result3 = puApiClient.getUsernameByPostWithJSON(user);
@@ -31,13 +31,13 @@ class PuApiClientTest {
 
     @Test
     void testAPI() throws UnsupportedEncodingException {
-        String result1 = puApiClient.getNameByGet("Tom");
-        String result2 = puApiClient.getNameByPost("Tom2");
+//        String result1 = puApiClient.getNameByGet("Tom");
+//        String result2 = puApiClient.getNameByGet2("Tom2");
         User user = new User();
         user.setUsername("Tom3");
         String result3 = puApiClient.getUsernameByPostWithJSON(user);
-        System.out.println(result1);
-        System.out.println(result2);
+//        System.out.println(result1);
+//        System.out.println(result2);
         System.out.println(result3);
     }
 

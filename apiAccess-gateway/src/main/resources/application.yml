@@ -4,18 +4,26 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ingredients
+        - id: api_route
           uri: http://localhost:8123
           predicates:
             - Path=/api/**
-          filters:
-            - AddRequestHeader=color, blue
-            - AddRequestParameter=name, pujun
-            - name: CircuitBreaker
-              args:
-                name: myCircuitBreaker
-                fallbackUri: forward:/fallback
-        - id: ingredients-fallback
-          uri: http://211.159.150.239/
-          predicates:
-            - Path=/fallback
+#          filters:
+#            - AddRequestHeader=color, blue
+#            - AddRequestParameter=name, pujun
+#            - name: CircuitBreaker
+#              args:
+#                name: myCircuitBreaker
+#                fallbackUri: forward:/fallback
+#        - id: ingredients-fallback
+#          uri: http://211.159.150.239/
+#          predicates:
+#            - Path=/fallback
+knife4j:
+  enable-aggregation: true
+  cloud:
+    enable: true
+    routes:
+      - name: 用户体系
+        uri: 127.0.0.1:8101
+        location: /v3/api-docs

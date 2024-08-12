@@ -13,16 +13,15 @@ public class ApiAccessGatewayApplication {
         SpringApplication.run(ApiAccessGatewayApplication.class, args);
     }
 
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("to_baidu", r -> r.path("/") //这个是URL的path后缀
-                        .uri("http://www.baidu.com/"))
-                .route("topujun", r -> r.path("/user/login") //这个是URL的path后缀 会加入到下面uri的后缀
-                        .uri("http://211.159.150.239/"))
-                .route("topujun2", r -> r.host("*.myhost.org") // 这个是域名
-                        .uri("http://httpbin.org"))
-                .build();
-
-    }
+//    @Bean
+//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                .route("to_baidu", r -> r.path("/") //这个是URL的path后缀
+//                        .uri("http://www.baidu.com/"))
+//                .route("topujun", r -> r.path("/user/login") //这个是URL的path后缀 会加入到下面uri的后缀
+//                        .uri("http://211.159.150.239/"))
+//                .route("topujun2", r -> r.host("*.myhost.org") // 这个是域名
+//                        .uri("http://httpbin.org"))
+//                .build();
+//    }
 }

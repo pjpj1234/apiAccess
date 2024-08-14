@@ -22,6 +22,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        公共服务-->
+        <dependency>
+            <groupId>com.pujun</groupId>
+            <artifactId>apiAccess-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 <!--    PRC依赖冲突 需要包含 Protobuf 库-->
         <dependency>
             <groupId>com.google.protobuf</groupId>

@@ -2,7 +2,7 @@ package com.pujun.apiaccess.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
 

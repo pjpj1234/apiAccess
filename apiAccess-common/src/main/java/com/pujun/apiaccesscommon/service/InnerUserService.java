@@ -1,6 +1,5 @@
 package com.pujun.apiaccesscommon.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.pujun.apiaccesscommon.entity.User;
 
 /**

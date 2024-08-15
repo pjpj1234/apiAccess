@@ -1,7 +1,7 @@
 package com.pujun.apiaccess.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.pujun.apiaccess.model.entity.InterfaceInfo;
+import com.pujun.apiaccesscommon.entity.InterfaceInfo;
 
 
 /**

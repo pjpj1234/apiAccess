@@ -1,6 +1,5 @@
 package com.pujun.apiaccesscommon.service;
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
+
 
 /**
 * @author pujun
@@ -10,12 +9,12 @@ import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
 public interface InnerUserInterfaceInfoService  {
 
     /**
-     * 从数据库中查询模拟接口（URL）是否存在，以及方法是否匹配
-     * @param path
-     * @param method
+     * 查看是否还有调用次数
+     * @param userId
+     * @param interfaceId
      * @return
      */
-    UserInterfaceInfo getInterfaceInfoByPath(String path, String method);
+    boolean hasInvokeCount(long userId, long interfaceId);
 
     /**
      * 接口调用次数 + 1

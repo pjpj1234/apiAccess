@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pujun.apiaccess.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.pujun.apiaccess.model.entity.User">
+    <resultMap id="BaseResultMap" type="com.pujun.apiaccesscommon.entity.User">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="userName" column="userName" jdbcType="VARCHAR"/>
         <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>

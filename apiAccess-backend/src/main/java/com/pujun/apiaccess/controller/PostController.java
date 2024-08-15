@@ -12,7 +12,7 @@ import com.pujun.apiaccess.model.dto.post.PostAddRequest;
 import com.pujun.apiaccess.model.dto.post.PostQueryRequest;
 import com.pujun.apiaccess.model.dto.post.PostUpdateRequest;
 import com.pujun.apiaccess.model.entity.Post;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.User;
 import com.pujun.apiaccess.service.PostService;
 import com.pujun.apiaccess.service.UserService;
 import com.pujun.apiaccess.annotation.AuthCheck;

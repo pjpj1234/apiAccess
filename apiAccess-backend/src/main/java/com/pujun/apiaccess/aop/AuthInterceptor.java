@@ -2,7 +2,7 @@ package com.pujun.apiaccess.aop;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.pujun.apiaccess.common.ErrorCode;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.User;
 import com.pujun.apiaccess.annotation.AuthCheck;
 import com.pujun.apiaccess.exception.BusinessException;
 import com.pujun.apiaccess.service.UserService;

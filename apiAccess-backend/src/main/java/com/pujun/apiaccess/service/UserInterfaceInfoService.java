@@ -1,6 +1,6 @@
 package com.pujun.apiaccess.service;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pujun.apiaccess.model.entity.UserInterfaceInfo;
+import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
 
 /**
 * @author pujun

@@ -8,7 +8,7 @@ import com.pujun.apiaccess.common.ErrorCode;
 import com.pujun.apiaccess.constant.UserConstant;
 import com.pujun.apiaccess.exception.BusinessException;
 import com.pujun.apiaccess.mapper.UserMapper;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.User;
 import com.pujun.apiaccess.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

@@ -3,6 +3,7 @@ package com.pujun.apiaccess.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pujun.apiaccess.model.entity.Post;
 
+
 /**
 * @author pujun
 * @description 针对表【post(帖子)】的数据库操作Mapper

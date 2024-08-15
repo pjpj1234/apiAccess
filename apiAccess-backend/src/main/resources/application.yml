@@ -49,4 +49,4 @@ dubbo:
   registry:
     address: nacos://${nacos.address:127.0.0.1}:8848?username=nacos&password=nacos
   provider:
-    timeout: 50000
+    timeout: 1000000 # 将超时设置为100秒

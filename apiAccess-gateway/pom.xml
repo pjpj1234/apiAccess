@@ -19,7 +19,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-
+<!--        自己创建的公共服务common包-->
+        <dependency>
+            <groupId>com.pujun</groupId>
+            <artifactId>apiAccess-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 <!--        starter 启动自动配置类-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

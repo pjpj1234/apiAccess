@@ -11,8 +11,8 @@ import com.pujun.apiaccess.model.dto.interfaceInfo.InterfaceInfoAddRequest;
 import com.pujun.apiaccess.model.dto.interfaceInfo.InterfaceInfoInvokeRequest;
 import com.pujun.apiaccess.model.dto.interfaceInfo.InterfaceInfoQueryRequest;
 import com.pujun.apiaccess.model.dto.interfaceInfo.InterfaceInfoUpdateRequest;
-import com.pujun.apiaccess.model.entity.InterfaceInfo;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.InterfaceInfo;
+import com.pujun.apiaccesscommon.entity.User;
 import com.pujun.apiaccess.model.enums.InterfaceInfoStatusEnum;
 import com.pujun.apiaccess.service.InterfaceInfoService;
 import com.pujun.apiaccess.service.UserInterfaceInfoService;
@@ -304,6 +304,9 @@ public class InterfaceInfoController {
                 interfaceInfoInvokeRequest.getUserRequestParams(), com.pujun.apiaccessinterfacesdk.model.User.class);
         String usernameByPostWithJSON = puApiClient.getUsernameByPostWithJSON(user);
 //        userInterfaceInfoService.invokeInterfaceCount();
+        if(Objects.equals(usernameByPostWithJSON, "fail")){
+            return ResultUtils.error(ErrorCode.SYSTEM_ERROR, "参数错误或调用次数已用完");
+        }
         return ResultUtils.success(usernameByPostWithJSON);
         // TODO 用户调用接口时由固定方法名改成根据测试地址来调用（根据该接口id，传到puclient的一个方法参数里面，取调用对应接口的地址）
     }

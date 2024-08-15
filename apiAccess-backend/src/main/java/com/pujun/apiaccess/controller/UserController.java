@@ -9,7 +9,7 @@ import com.pujun.apiaccess.common.ErrorCode;
 import com.pujun.apiaccess.common.ResultUtils;
 import com.pujun.apiaccess.exception.BusinessException;
 import com.pujun.apiaccess.model.dto.user.*;
-import com.pujun.apiaccess.model.entity.User;
+import com.pujun.apiaccesscommon.entity.User;
 import com.pujun.apiaccess.model.vo.UserVO;
 import com.pujun.apiaccess.service.UserService;
 import com.pujun.apiaccess.model.dto.*;

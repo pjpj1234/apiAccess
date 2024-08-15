@@ -3,7 +3,7 @@ package com.pujun.apiaccess.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pujun.apiaccess.common.ErrorCode;
 import com.pujun.apiaccess.exception.BusinessException;
-import com.pujun.apiaccess.model.entity.InterfaceInfo;
+import com.pujun.apiaccesscommon.entity.InterfaceInfo;
 import com.pujun.apiaccess.service.InterfaceInfoService;
 import com.pujun.apiaccess.mapper.InterfaceInfoMapper;
 import org.apache.commons.lang3.ObjectUtils;

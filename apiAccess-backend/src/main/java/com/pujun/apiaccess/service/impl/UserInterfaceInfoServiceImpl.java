@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pujun.apiaccess.common.ErrorCode;
 import com.pujun.apiaccess.exception.BusinessException;
-import com.pujun.apiaccess.model.entity.UserInterfaceInfo;
+import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
 import com.pujun.apiaccess.service.UserInterfaceInfoService;
 import com.pujun.apiaccess.mapper.UserInterfaceInfoMapper;
 import org.apache.commons.lang3.ObjectUtils;

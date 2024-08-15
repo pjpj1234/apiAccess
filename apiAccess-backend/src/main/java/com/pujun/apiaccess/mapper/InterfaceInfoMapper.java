@@ -3,6 +3,8 @@ package com.pujun.apiaccess.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pujun.apiaccesscommon.entity.InterfaceInfo;
 
+import java.util.List;
+
 
 /**
 * @author JD
@@ -12,6 +14,7 @@ import com.pujun.apiaccesscommon.entity.InterfaceInfo;
 */
 public interface InterfaceInfoMapper extends BaseMapper<InterfaceInfo> {
 
+    List<InterfaceInfo> listTopInvokeInterfaceInfo(int limit);
 }
 
 

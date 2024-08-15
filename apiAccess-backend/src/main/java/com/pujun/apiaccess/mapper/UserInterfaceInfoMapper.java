@@ -2,7 +2,10 @@ package com.pujun.apiaccess.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.pujun.apiaccess.model.vo.UserInterfaceInfoVO;
 import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
+
+import java.util.List;
 
 
 /**
@@ -13,6 +16,12 @@ import com.pujun.apiaccesscommon.entity.UserInterfaceInfo;
 */
 public interface UserInterfaceInfoMapper extends BaseMapper<UserInterfaceInfo> {
 
+    /**
+     * 得到top调用次数最多的接口
+     * @param limit
+     * @return
+     */
+    List<UserInterfaceInfoVO> listTopInvokeInterfaceInfo(int limit);
 }
 
 
